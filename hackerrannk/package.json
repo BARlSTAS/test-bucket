@@ -1,0 +1,15 @@
+{
+    "name": "hackerrannk",
+    "version": "0.0.1",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "mocha"
+    },
+    "author": "irrationnelle <drakkarverenis@gmail.com>",
+    "license": "ISC",
+    "devDependencies": {
+        "chai": "^4.2.0",
+        "mocha": "^8.0.1"
+    }
+}
