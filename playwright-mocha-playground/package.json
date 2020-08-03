@@ -4,7 +4,7 @@
   "description": "project to exercise e2e test automation with playwright and mocha",
   "main": "index.ts",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha -r node_modules/ts-node/register"
   },
   "repository": {
     "type": "git",
@@ -26,6 +26,8 @@
   },
   "devDependencies": {
     "@types/assert": "^1.5.1",
-    "@types/mocha": "^8.0.1"
+    "@types/mocha": "^8.0.1",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.7"
   }
 }
