@@ -1,0 +1,23 @@
+{
+  "name": "playwright-mocha-playground",
+  "version": "0.0.1",
+  "description": "project to exercise e2e test automation with playwright and mocha",
+  "main": "index.ts",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/BARlSTAS/test-bucket.git"
+  },
+  "keywords": [
+    "playwright",
+    "mocha"
+  ],
+  "author": "irrationnelle <drakkarverenis@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BARlSTAS/test-bucket/issues"
+  },
+  "homepage": "https://github.com/BARlSTAS/test-bucket#readme"
+}
