@@ -2,7 +2,7 @@
 name: 새 기능 건의
 about: test-bucket 에 추가하고 싶은 기능을 건의합니다.
 title: ''
-labels: 'feature'
+labels: 'enhancement'
 ---
 
 **추가하려는 기능은 어떤 문제와 관련이 있나요? 혹은 이 기능으로 무엇이 더 좋아지나요? 간단히 적어주세요**
