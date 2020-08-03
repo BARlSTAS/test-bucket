@@ -1,0 +1,16 @@
+{
+  "name": "tutorial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test" : "mocha test/**/*.js --recursive",
+    "coverage" : "nyc --reporter=lcov mocha test/**/*.js --recursive"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^8.1.0",
+    "nyc": "^15.1.0"
+  }
+}
