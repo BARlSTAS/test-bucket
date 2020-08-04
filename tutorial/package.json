@@ -4,13 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test" : "mocha test/**/*.js --recursive",
-    "coverage" : "nyc --reporter=lcov mocha test/**/*.js --recursive"
+    "nyan" : "mocha -R nyan test/**/*.js --recursive",
+    "test": "mocha test/**/*.js --recursive",
+    "coverage": "nyc --reporter=lcov mocha test/**/*.js --recursive"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "mocha": "^8.1.0",
     "nyc": "^15.1.0"
+  },
+  "dependencies": {
+    "sqlite3": "^5.0.0"
   }
 }

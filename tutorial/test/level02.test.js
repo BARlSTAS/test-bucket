@@ -1,10 +1,8 @@
 var assert = require('assert')
 var {sum} = require('../src/level02')
 describe(('Test') , function() {
-    it('get value ',()=> {
+    it('test sum',()=> {
     })
-    it('pop & get last element ',()=> {
-    })
-    it('check arr length ',()=> {
+    it('throw sum type error',()=> {
     })
 })

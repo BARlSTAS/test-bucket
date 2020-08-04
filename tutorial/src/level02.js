@@ -1,22 +1,6 @@
-exports.TestArr = class TestArr {
-    constructor(arr){
-        this.__value = arr
+exports.num_sum = function (a, b) {
+    if(!Number.isInteger(a) || !Number.isInteger(b)) {
+        throw Error('숫자가 아닙니다.')
     }
-    getValue() {
-        return this.__value
-    }
-    pop() {
-        return pop(this.__value)
-    }
-    getLength() {
-        return getLength(this.__value)
-    }
-}
-
-function pop(arr) {
-    return arr.pop()
-}
-
-function getLength(arr) {
-    return arr.length
+    return a + b
 }

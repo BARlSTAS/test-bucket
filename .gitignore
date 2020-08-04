@@ -105,3 +105,10 @@ dist
 
 # Type build
 build
+
+# Coverage Reports
+.nyc_output
+coverage
+
+#mac cahce
+.DS_Store
