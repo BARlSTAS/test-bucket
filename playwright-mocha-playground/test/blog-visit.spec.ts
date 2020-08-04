@@ -1,5 +1,5 @@
 import * as playwright from "playwright";
-import assert from "assert";
+import { expect } from "chai";
 
 let page: any;
 let browser: any;
@@ -21,6 +21,7 @@ describe("개발 블로그에 들어가면", () => {
 
     it("페이지 타이틀로 irrationnelle 을 확인할 수 있다.", async () => {
         await page.goto("https://dev.rase.blog/");
-        assert.equal(await page.title(), "Home | irrationnelle");
+        const pageTitle = await page.title();
+        expect(pageTitle).to.have.string("irrationnelle");
     });
 });
