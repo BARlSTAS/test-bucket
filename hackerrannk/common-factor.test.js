@@ -104,24 +104,25 @@ describe("공배수를 구하는 문제에서", () => {
 
 describe("두 배열이 주어지면 하나의 배열에서는 공배수를 구하고, 두번째 배열에서는 공배수가 공약수인지 확인한다", () => {
     describe("2와 4로 공배수를 구했을 때", () => {
-        it("16, 32, 96 의 배열을 주면 미리 구한 공배수가 공약수인지 확인한다.", () => {
-            const arr1 = [2, 4];
-            const multiplesNum = getFirstMultiples(arr1);
+        let arr1;
+        let arr2;
 
-            const arr2 = [16, 32, 96];
+        beforeEach(() => {
+            arr1 = [2, 4];
+            arr2 = [16, 32, 96];
+        });
+
+        it("16, 32, 96 의 배열을 주면 미리 구한 공배수가 공약수인지 확인한다.", () => {
+            const multiplesNum = getFirstMultiples(arr1);
             expect(isFactor(arr2, multiplesNum)).to.be.true;
         });
 
         it("16, 32, 96 의 배열을 주면 미리 구한 공배수의 배수를 배열에서 가장 작은 숫자를 넘거나 동등할 때까지 구한다.", () => {
-            const arr1 = [2, 4];
-            const arr2 = [16, 32, 96];
             const multiplesArr = getMultiplesArr(arr1, arr2);
             expect(multiplesArr).to.have.members([4, 8, 16]);
         });
 
         it("16, 32, 96 의 배열을 주면 미리 구한 공배수의 배수를 배열에서 가장 작은 숫자를 넘거나 동등할 때까지 구해 갯수를 센다.", () => {
-            const arr1 = [2, 4];
-            const arr2 = [16, 32, 96];
             const countMultiplesArr = getCountMultiplesArr(arr1, arr2);
             expect(countMultiplesArr).to.have.equal(3);
         });
