@@ -3,11 +3,6 @@ import chai from "chai";
 
 const { expect } = chai;
 
-const getCommonMultiples = arr => {
-    let firstNum = getFirstMultiples(arr);
-    return [firstNum, firstNum * 2];
-};
-
 const getMinimumNum = arr =>
     arr.reduce((acc, curr) => {
         if (acc > curr) {
@@ -73,36 +68,37 @@ const getMultiplesArr = (arr1, arr2) => {
 const getCountMultiplesArr = (arr1, arr2) => getMultiplesArr(arr1, arr2).length;
 
 describe("공배수를 구하는 문제에서", () => {
-    // 여기서 테스트를 3개 만든 것은 켄트 백의 TDD 에서 이야기하는 삼각측량을 하기 위해서이다.
-    it("3와 4가 배열로 주어지면 12과 24의 배열을 만든다", () => {
+    // 여기서 테스트를 4개 만든 것은 켄트 백의 TDD 에서 이야기하는 삼각측량을 하기 위해서이다.
+    it("3와 4가 배열로 주어지면 최소 공배수로 12를 구한다.", () => {
         const arr = [3, 4];
-        const commonMultiples = getCommonMultiples(arr);
-        expect(commonMultiples).to.have.members([12, 24]);
+        const commonMultiples = getFirstMultiples(arr);
+        expect(commonMultiples).to.equal(12);
     });
 
-    it("2,3,5가 주어지면 30, 60의 배열을 만든다", () => {
+    it("2,3,5가 주어지면 최소 공배수로 30을 구한다", () => {
         const arr = [2, 3, 5];
-        const commonMultiples = getCommonMultiples(arr);
-        expect(commonMultiples).to.have.members([30, 60]);
+        const commonMultiples = getFirstMultiples(arr);
+        expect(commonMultiples).to.equal(30);
     });
 
-    it("2,3,4 가 주어지면 12와 24의 배열을 만든다", () => {
+    it("2,3,4 가 주어지면 최소 공배수로 12를 구한다", () => {
         const arr = [2, 3, 4];
-        const commonMultiples = getCommonMultiples(arr);
-        expect(commonMultiples).to.have.members([12, 24]);
+        const commonMultiples = getFirstMultiples(arr);
+        expect(commonMultiples).to.equal(12);
     });
 
-    it("2,4가 주어지면 4와 8의 배열을 만든다", () => {
+    it("2,4가 주어지면 최소 공배수로 4를 구한다", () => {
         const arr = [2, 4];
-        const commonMultiples = getCommonMultiples(arr);
-        expect(commonMultiples).to.have.members([4, 8]);
+        const commonMultiples = getFirstMultiples(arr);
+        expect(commonMultiples).to.equal(4);
     });
 
     // 이 테스트가 추가된 것은 최소 공배수를 구하기 위해 충분한 사례가 없었기 때문이다.
-    it("3, 9, 6 이 주어지면 18과 36의 배열을 만든다", () => {
+    // 즉 hackerrank 에서 풀었던 문제중 통과하지 못한 테스트를 추가한 것이다.
+    it("3, 9, 6 이 주어지면 최소 공배수로 18을 구한다", () => {
         const arr = [3, 9, 6];
-        const commonMultiples = getCommonMultiples(arr);
-        expect(commonMultiples).to.have.members([18, 36]);
+        const commonMultiples = getFirstMultiples(arr);
+        expect(commonMultiples).to.equal(18);
     });
 });
 
