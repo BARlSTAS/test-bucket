@@ -4,15 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "nyan" : "mocha -R nyan test/**/*.js --recursive",
-    "test": "mocha test/**/*.js --recursive",
-    "coverage": "nyc --reporter=lcov mocha test/**/*.js --recursive"
+    "nyan": "mocha -R nyan test/**/*.test.js --recursive",
+    "test": "mocha test/**/*.test.js --recursive --ignore level06.test.js ",
+    "coverage": "nyc --reporter=lcov mocha test/**/*.test.js --recursive  --ignore test/level06.test.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "mocha": "^8.1.0",
-    "nyc": "^15.1.0"
+    "nyc": "^15.1.0",
+    "express": "4.x",
+    "express-static": "1.x",
+    "puppeteer": "1.17.0",
+    "serve": "11.x"
   },
   "dependencies": {
     "sqlite3": "^5.0.0"
