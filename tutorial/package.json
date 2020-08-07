@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "nyan": "mocha -R nyan",
-    "test": "mocha --ignore test/level06.test.js ",
-    "coverage": "nyc --reporter=lcov mocha  --ignore test/level06.test.js"
+    "test": "mocha --ignore test/level06.test.js test/level08.js ",
+    "coverage": "nyc --reporter=lcov mocha  --ignore test/level06.test.js test/level08.js"
   },
   "author": "",
   "license": "ISC",
