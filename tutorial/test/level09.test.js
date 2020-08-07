@@ -10,7 +10,6 @@ describe('my app', function() {
 
   before(async function() {
     this.timeout(10000);
-
     // Create an Express static server that will serve up `index.html` at
     // `http://localhost:3000/index.html`
     const app = require('express')();
@@ -31,10 +30,10 @@ describe('my app', function() {
   it('displays the current page', async function() {
     this.timeout(10000);
     await page.waitFor('[data-commentid="1"]', {visible: true, timeout: 2000}); 
+    // change state by click
     await page.evaluate(() => document.querySelector('[data-commentid="1"]').firstElementChild.click());
     const content= await page.evaluate(() => document.querySelector('[data-commentid="1"]').innerHTML);
     assert.equal(content, 'You liked comment number 1')
     await page.waitFor(1000)
-    
   });
 });
