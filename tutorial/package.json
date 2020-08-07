@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "nyan": "mocha -R nyan test/**/*.test.js --recursive",
-    "test": "mocha test/**/*.test.js --recursive --ignore level06.test.js ",
-    "coverage": "nyc --reporter=lcov mocha test/**/*.test.js --recursive  --ignore test/level06.test.js"
+    "nyan": "mocha -R nyan",
+    "test": "mocha --ignore test/level06.test.js ",
+    "coverage": "nyc --reporter=lcov mocha  --ignore test/level06.test.js"
   },
   "author": "",
   "license": "ISC",
