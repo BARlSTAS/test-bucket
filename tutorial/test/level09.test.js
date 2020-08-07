@@ -27,7 +27,7 @@ describe('my app', function() {
     await server.close();
   });
 
-  it('displays the current page', async function() {
+  it('리액트 스테이트 변경하기', async function() {
     this.timeout(10000);
     await page.waitFor('[data-commentid="1"]', {visible: true, timeout: 2000}); 
     // change state by click
