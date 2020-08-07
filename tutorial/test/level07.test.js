@@ -20,7 +20,7 @@ this.timeout(10000);
     // Launch Puppeteer and navigate to the Express server
     browser = await puppeteer.launch(opts);
     page = await browser.newPage();
-    await page.goto('http://localhost:3001/index.html'); 
+    await page.goto('http://localhost:3001/src/level07/index.html'); 
   });
 
   after(async function() {
