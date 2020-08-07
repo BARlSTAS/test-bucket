@@ -5,6 +5,6 @@ it('Mocha!', ()=> {
     assert.equal('Mocha!',level08)
 })
 
-it('No Mocha!', ()=> {
+it.skip('No Mocha!', ()=> {
     assert.equal('Mocha!!',level08)
 })
