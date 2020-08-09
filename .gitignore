@@ -112,3 +112,7 @@ coverage
 
 #mac cahce
 .DS_Store
+
+/.idea/jsLinters/eslint.xml
+/.idea/inspectionProfiles/Project_Default.xml
+/.idea/workspace.xml

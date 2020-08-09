@@ -1,5 +1,6 @@
+// https://www.hackerrank.com/challenges/breaking-best-and-worst-records/problem
 import { expect } from 'chai';
-import { countMinimum, countMaximum } from '../src/breaking-the-records';
+import { getCount, getCountMaximumAndMinimum } from '../src/breaking-the-records';
 
 describe('배열의 첫번째 숫자부터 시작하여 ', () => {
   describe('작은 값이 나오면 기준값을 그 값으로 변경하고, 변경 횟수를 구할 때', () => {
@@ -8,7 +9,7 @@ describe('배열의 첫번째 숫자부터 시작하여 ', () => {
       const numList = [1, 2, 3];
 
       // when
-      const count = countMinimum(numList);
+      const count = getCount('minimum', numList);
 
       // then
       expect(count).to.be.equal(0);
@@ -21,7 +22,7 @@ describe('배열의 첫번째 숫자부터 시작하여 ', () => {
       const numList = [2, 1, 3];
 
       // when
-      const count = countMinimum(numList);
+      const count = getCount('minimum', numList);
 
       // then
       expect(count).to.be.equal(1);
@@ -32,7 +33,7 @@ describe('배열의 첫번째 숫자부터 시작하여 ', () => {
       const numList = [7, 4, 3, 5, 8, 1, 9];
 
       // when
-      const count = countMinimum(numList);
+      const count = getCount('minimum', numList);
 
       // then
       expect(count).to.be.equal(3);
@@ -45,7 +46,7 @@ describe('배열의 첫번째 숫자부터 시작하여 ', () => {
       const numList = [1, 2, 3];
 
       // when
-      const count = countMaximum(numList);
+      const count = getCount('maximum', numList);
 
       // then
       expect(count).to.be.equal(2);
@@ -58,7 +59,7 @@ describe('배열의 첫번째 숫자부터 시작하여 ', () => {
       const numList = [2, 1, 3];
 
       // when
-      const count = countMaximum(numList);
+      const count = getCount('maximum', numList);
 
       // then
       expect(count).to.be.equal(1);
@@ -69,10 +70,27 @@ describe('배열의 첫번째 숫자부터 시작하여 ', () => {
       const numList = [7, 4, 3, 5, 8, 1, 9];
 
       // when
-      const count = countMaximum(numList);
+      const count = getCount('maximum', numList);
 
       // then
       expect(count).to.be.equal(2);
+    });
+  });
+
+  describe('처음 값보다 높은 값과 낮은 값의 변경 횟수를 각각 높은 값, 낮은 값 순으로 배열 요소 2개짜리 배열로 만든다', () => {
+    it('7, 4, 3, 5, 8, 1, 9 일 때는 [2, 3] 배열을 반환한다.', () => {
+      const numList = [7, 4, 3, 5, 8, 1, 9];
+      const count = getCountMaximumAndMinimum(numList);
+
+      expect(count).to.have.members([2, 3]);
+    });
+
+    // 테스트 케이스 실패
+    it('0 9 3 10 2 20 일 때는 [3, 0] 배열을 반환한다.', () => {
+      const numList = [0, 9, 3, 10, 2, 20];
+      const count = getCountMaximumAndMinimum(numList);
+
+      expect(count).to.have.members([3, 0]);
     });
   });
 });
