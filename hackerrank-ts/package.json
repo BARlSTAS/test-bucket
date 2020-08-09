@@ -9,25 +9,30 @@
   "scripts": {
     "test": "mocha"
   },
+  "type": "module",
   "dependencies": {
     "typescript": "^3.9.7"
   },
   "devDependencies": {
     "@types/chai": "^4.2.12",
+    "@types/eslint": "^7.2.0",
     "@types/mocha": "^8.0.1",
     "@types/node": "^12.12.50",
     "@typescript-eslint/eslint-plugin": "^3.6.1",
     "@typescript-eslint/parser": "^3.6.1",
     "chai": "^4.2.0",
+    "eslint": "^7.6.0",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.20.5",
+    "eslint-plugin-react-hooks": "^4.0.8",
     "mocha": "^8.1.1",
     "ts-node": "^8.10.2"
   },
   "eslintConfig": {
     "env": {
-      "browser": true,
+      "browser": false,
       "es2020": true
     },
     "extends": [
@@ -39,8 +44,8 @@
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
       "ecmaFeatures": {
-        "jsx": true,
-        "tsx": true
+        "jsx": false,
+        "tsx": false
       },
       "ecmaVersion": 11,
       "sourceType": "module"
