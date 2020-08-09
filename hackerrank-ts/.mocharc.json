@@ -1,0 +1,13 @@
+{
+  "diff": true,
+  "extension": ["ts"],
+  "package": "./package.json",
+  "reporter": "spec",
+  "slow": 75,
+  "timeout": 10000,
+  "ui": "bdd",
+  "spec": ["test/*.ts", "test/**/*.ts"],
+  "require" : [
+    "ts-node/register"
+  ]
+}
