@@ -4,5 +4,6 @@
 | 제목 | 브랜치  | 작성이 | 
 |--|--|--|
 | 모카를 활용한 테스트 튜토리얼  | [feat/tutorial](https://github.com/BARlSTAS/test-bucket/tree/feat/tutorial/tutorial)  | MoonSupport
+| puppeteer를 활용한 클라이언트 메모리 릭 테스트  | [client/leak-test](https://github.com/BARlSTAS/test-bucket/tree/client/leak-test/client-leak)  | MoonSupport
 
 
