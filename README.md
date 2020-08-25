@@ -1,15 +1,8 @@
-# test-bucket
+# Test-Bucket
 테스트 코드를 각자의 브랜치에 공유하고 일반화하여 테스트 가이드라인으로 제공합니다
 
-## Branch Strategy
+| 제목 | 브랜치  | 작성이 | 
+|--|--|--|
+| 모카를 활용한 테스트 튜토리얼  | [feat/tutorial](https://github.com/BARlSTAS/test-bucket/tree/feat/tutorial/tutorial)  | MoonSupport
 
-### 개인 테스트 프로젝트
-팀원 한 명당 github `username`으로 브랜치 하나를 생성해서 코드를 유지 관리합니다.
-이 때, 프로젝트명으로 `디렉토리를 만든 후` 생성된 디렉토리 내에서 작업해주시면 됩니다.
 
-> 다른 분들의 브랜치를 참고해서 만들어 주세요 :)
-
-### HotFix
-개인 테스트 프로젝트 **이외에** master에 반영했으면 하는 사항이 있을 경우 `hotfix/작업명` 와 같은 브랜치명으로 생성 후에 PR을 남겨주세요.
-
-Merge가 끝난 후에는 쾌적한 브랜치 관리를 위해 저장소에서 사용한 브랜치를 꼭 삭제해주세요 :)
