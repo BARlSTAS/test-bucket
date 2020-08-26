@@ -105,3 +105,6 @@ dist
 
 # Type build
 build
+
+#mac cahce
+.DS_Store
